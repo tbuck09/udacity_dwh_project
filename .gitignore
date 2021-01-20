@@ -1,0 +1,4 @@
+ignore/
+reference/
+.ipynb_checkpoints/
+__pycache__/
