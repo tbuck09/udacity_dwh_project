@@ -4,6 +4,7 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def drop_tables(cur, conn):
+    """Drop any existing tables that need correcting. Start fresh."""
     print("*"*20)
     print("Starting Table Dropping")
 
@@ -20,6 +21,7 @@ def drop_tables(cur, conn):
 
 
 def create_tables(cur, conn):
+    """Create tables for staging and analysis"""
     print("*"*20)
     print("Starting Table Creation")
 
@@ -36,6 +38,7 @@ def create_tables(cur, conn):
 
 
 def main():
+    """Loads configurations and runs drop_tables() and create_tables()"""
     config = configparser.ConfigParser()
     config.read('dwh.cfg')
 

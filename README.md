@@ -47,7 +47,7 @@ As this is a project for a Udacity course, it is expected that the reviewers wil
         * Database Password (ex: 1234asdf)
         * Port of the connection (ex: 5439)
     * IAM_ROLE
-        * Your ARN (ex: arn:aws:iam::123456789012:user/redshift_user)
+        * Your ARN (ex: arn:aws:iam::123456789012:role/RedshiftRole)
 ### Create Tables
 3. The `create_tables.py` file should be run in the console first in order to
     1. drop any tables which currently exist and

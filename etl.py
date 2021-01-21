@@ -4,6 +4,7 @@ from sql_queries import copy_table_queries, insert_table_queries
 from time import time
 
 def load_staging_tables(cur, conn):
+    """Load staging tables to Postgres DB hosted on AWS Redshift"""
     t= time()
 
     print("*"*20)
@@ -25,6 +26,7 @@ def load_staging_tables(cur, conn):
 
 
 def insert_tables(cur, conn):
+    """Load data from staging tables and transform it to the appropriate Star-Schema tables"""
     t= time()
 
     print("*"*20)
@@ -44,6 +46,7 @@ def insert_tables(cur, conn):
     print(f"Duration: {duration} minutes.")
 
 def main():
+    """Loads configurations and runs load_staging_tables() and insert_tables()"""
     config = configparser.ConfigParser()
     config.read('dwh.cfg')
 
